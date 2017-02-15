@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		435E18D61E539CD000E417A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E18D51E539CD000E417A7 /* main.m */; };
+		435E18E11E539D0900E417A7 /* LUPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E18E01E539D0900E417A7 /* LUPerson.m */; };
+		435E18E41E54CC8800E417A7 /* NSString+LUExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E18E31E54CC8800E417A7 /* NSString+LUExtentions.m */; };
+		435E18E71E54CCD200E417A7 /* NSArray+LUExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E18E61E54CCD200E417A7 /* NSArray+LUExtention.m */; };
+		435E18EA1E54CEBA00E417A7 /* NSAttributedString+LUExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E18E91E54CEBA00E417A7 /* NSAttributedString+LUExtention.m */; };
+		435E18EF1E54D44100E417A7 /* LULesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E18EE1E54D44100E417A7 /* LULesson.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		435E18D01E539CD000E417A7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		435E18D21E539CD000E417A7 /* ObjectiveLecture */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjectiveLecture; sourceTree = BUILT_PRODUCTS_DIR; };
+		435E18D51E539CD000E417A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		435E18DF1E539D0900E417A7 /* LUPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUPerson.h; sourceTree = "<group>"; };
+		435E18E01E539D0900E417A7 /* LUPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUPerson.m; sourceTree = "<group>"; };
+		435E18E21E54CC8800E417A7 /* NSString+LUExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LUExtentions.h"; sourceTree = "<group>"; };
+		435E18E31E54CC8800E417A7 /* NSString+LUExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LUExtentions.m"; sourceTree = "<group>"; };
+		435E18E51E54CCD200E417A7 /* NSArray+LUExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LUExtention.h"; sourceTree = "<group>"; };
+		435E18E61E54CCD200E417A7 /* NSArray+LUExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LUExtention.m"; sourceTree = "<group>"; };
+		435E18E81E54CEBA00E417A7 /* NSAttributedString+LUExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+LUExtention.h"; sourceTree = "<group>"; };
+		435E18E91E54CEBA00E417A7 /* NSAttributedString+LUExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+LUExtention.m"; sourceTree = "<group>"; };
+		435E18EC1E54D3D000E417A7 /* LUPrinter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUPrinter.h; sourceTree = "<group>"; };
+		435E18ED1E54D44100E417A7 /* LULesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LULesson.h; sourceTree = "<group>"; };
+		435E18EE1E54D44100E417A7 /* LULesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LULesson.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		435E18CF1E539CD000E417A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		435E18C91E539CD000E417A7 = {
+			isa = PBXGroup;
+			children = (
+				435E18D41E539CD000E417A7 /* ObjectiveLecture */,
+				435E18D31E539CD000E417A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		435E18D31E539CD000E417A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				435E18D21E539CD000E417A7 /* ObjectiveLecture */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		435E18D41E539CD000E417A7 /* ObjectiveLecture */ = {
+			isa = PBXGroup;
+			children = (
+				435E18D51E539CD000E417A7 /* main.m */,
+				435E18E81E54CEBA00E417A7 /* NSAttributedString+LUExtention.h */,
+				435E18E91E54CEBA00E417A7 /* NSAttributedString+LUExtention.m */,
+				435E18DC1E539CEC00E417A7 /* Classes */,
+			);
+			path = ObjectiveLecture;
+			sourceTree = "<group>";
+		};
+		435E18DC1E539CEC00E417A7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				435E18DF1E539D0900E417A7 /* LUPerson.h */,
+				435E18E01E539D0900E417A7 /* LUPerson.m */,
+				435E18ED1E54D44100E417A7 /* LULesson.h */,
+				435E18EE1E54D44100E417A7 /* LULesson.m */,
+				435E18EC1E54D3D000E417A7 /* LUPrinter.h */,
+				435E18E21E54CC8800E417A7 /* NSString+LUExtentions.h */,
+				435E18E31E54CC8800E417A7 /* NSString+LUExtentions.m */,
+				435E18E51E54CCD200E417A7 /* NSArray+LUExtention.h */,
+				435E18E61E54CCD200E417A7 /* NSArray+LUExtention.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		435E18D11E539CD000E417A7 /* ObjectiveLecture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 435E18D91E539CD000E417A7 /* Build configuration list for PBXNativeTarget "ObjectiveLecture" */;
+			buildPhases = (
+				435E18CE1E539CD000E417A7 /* Sources */,
+				435E18CF1E539CD000E417A7 /* Frameworks */,
+				435E18D01E539CD000E417A7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ObjectiveLecture;
+			productName = ObjectiveLecture;
+			productReference = 435E18D21E539CD000E417A7 /* ObjectiveLecture */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		435E18CA1E539CD000E417A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LU;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Daria;
+				TargetAttributes = {
+					435E18D11E539CD000E417A7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 435E18CD1E539CD000E417A7 /* Build configuration list for PBXProject "ObjectiveLecture" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 435E18C91E539CD000E417A7;
+			productRefGroup = 435E18D31E539CD000E417A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				435E18D11E539CD000E417A7 /* ObjectiveLecture */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		435E18CE1E539CD000E417A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				435E18EF1E54D44100E417A7 /* LULesson.m in Sources */,
+				435E18EA1E54CEBA00E417A7 /* NSAttributedString+LUExtention.m in Sources */,
+				435E18D61E539CD000E417A7 /* main.m in Sources */,
+				435E18E41E54CC8800E417A7 /* NSString+LUExtentions.m in Sources */,
+				435E18E71E54CCD200E417A7 /* NSArray+LUExtention.m in Sources */,
+				435E18E11E539D0900E417A7 /* LUPerson.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		435E18D71E539CD000E417A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		435E18D81E539CD000E417A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		435E18DA1E539CD000E417A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		435E18DB1E539CD000E417A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		435E18CD1E539CD000E417A7 /* Build configuration list for PBXProject "ObjectiveLecture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				435E18D71E539CD000E417A7 /* Debug */,
+				435E18D81E539CD000E417A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		435E18D91E539CD000E417A7 /* Build configuration list for PBXNativeTarget "ObjectiveLecture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				435E18DA1E539CD000E417A7 /* Debug */,
+				435E18DB1E539CD000E417A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 435E18CA1E539CD000E417A7 /* Project object */;
+}
