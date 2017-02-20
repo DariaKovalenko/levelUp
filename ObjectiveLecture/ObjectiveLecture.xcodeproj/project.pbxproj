@@ -13,6 +13,7 @@
 		435E18E71E54CCD200E417A7 /* NSArray+LUExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E18E61E54CCD200E417A7 /* NSArray+LUExtention.m */; };
 		435E18EA1E54CEBA00E417A7 /* NSAttributedString+LUExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E18E91E54CEBA00E417A7 /* NSAttributedString+LUExtention.m */; };
 		435E18EF1E54D44100E417A7 /* LULesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E18EE1E54D44100E417A7 /* LULesson.m */; };
+		43DE642A1E5B6BA200F2F53D /* LUPersonsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DE64291E5B6BA200F2F53D /* LUPersonsList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,8 @@
 		435E18EC1E54D3D000E417A7 /* LUPrinter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUPrinter.h; sourceTree = "<group>"; };
 		435E18ED1E54D44100E417A7 /* LULesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LULesson.h; sourceTree = "<group>"; };
 		435E18EE1E54D44100E417A7 /* LULesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LULesson.m; sourceTree = "<group>"; };
+		43DE64281E5B6BA200F2F53D /* LUPersonsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUPersonsList.h; sourceTree = "<group>"; };
+		43DE64291E5B6BA200F2F53D /* LUPersonsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUPersonsList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				435E18E01E539D0900E417A7 /* LUPerson.m */,
 				435E18ED1E54D44100E417A7 /* LULesson.h */,
 				435E18EE1E54D44100E417A7 /* LULesson.m */,
+				43DE64281E5B6BA200F2F53D /* LUPersonsList.h */,
+				43DE64291E5B6BA200F2F53D /* LUPersonsList.m */,
 				435E18EC1E54D3D000E417A7 /* LUPrinter.h */,
 				435E18E21E54CC8800E417A7 /* NSString+LUExtentions.h */,
 				435E18E31E54CC8800E417A7 /* NSString+LUExtentions.m */,
@@ -159,6 +164,7 @@
 				435E18EF1E54D44100E417A7 /* LULesson.m in Sources */,
 				435E18EA1E54CEBA00E417A7 /* NSAttributedString+LUExtention.m in Sources */,
 				435E18D61E539CD000E417A7 /* main.m in Sources */,
+				43DE642A1E5B6BA200F2F53D /* LUPersonsList.m in Sources */,
 				435E18E41E54CC8800E417A7 /* NSString+LUExtentions.m in Sources */,
 				435E18E71E54CCD200E417A7 /* NSArray+LUExtention.m in Sources */,
 				435E18E11E539D0900E417A7 /* LUPerson.m in Sources */,

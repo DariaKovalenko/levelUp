@@ -9,8 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "LUPerson.h"
 
+typedef BOOL (^LUPersonFilter)(LUPerson *person);
+
 @interface NSArray (LUExtention)
 
 - (void)printFirstPerson;
+
+- (void)enumeratePersonsUsingBlock:(void (^)(LUPerson *person, NSInteger index))block;
+
+- (NSArray *)filteredPersonsUsingBlock:(LUPersonFilter)block;
 
 @end

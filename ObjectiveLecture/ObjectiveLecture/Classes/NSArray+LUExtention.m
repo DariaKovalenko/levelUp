@@ -7,6 +7,7 @@
 //
 
 #import "NSArray+LUExtention.h"
+#import "LUPerson.h"
 
 @implementation NSArray (LUExtention)
 
@@ -16,5 +17,26 @@
         NSLog(@"%@", person);
     }
 }
+
+- (void)enumeratePersonsUsingBlock:(void (^)(LUPerson *, NSInteger index))block {
+    for (NSInteger index = 0; index < self.count; index++) {
+        LUPerson *person = self[0];
+        block(person, index);
+    }
+}
+
+- (NSArray *)filteredPersonsUsingBlock:(BOOL (^)(LUPerson *person))block {
+    NSMutableArray *filteredPersons = [NSMutableArray array];
+    for (LUPerson *person in self) {
+        BOOL isConditionConfirmed = block(person);
+        if (isConditionConfirmed) {
+            [filteredPersons addObject:person];
+        }
+    }
+    
+    return [filteredPersons copy];
+}
+
+// ReturnType (^)(LUPerson *, NSInteger index)
 
 @end

@@ -11,5 +11,6 @@
 
 @interface LULesson : NSObject <LUPrinter>
 @property (nonatomic, copy) NSString *title;
+@property (nonatomic, readonly, getter=isPassed) BOOL passed;
 
 @end

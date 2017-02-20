@@ -19,12 +19,13 @@
 
 @dynamic fullName;
 
-- (instancetype)initWithAge:(NSInteger)age {
+- (instancetype)initWithAge:(NSInteger)age sex:(LUPersonSex)sex {
     self = [super init];
     if (self) {
         _dict = @{ @"key1" : @"lalala",
                    @"key2" : @"lololo"
                    };
+        _sex = sex;
         userAge = age;
     }
     

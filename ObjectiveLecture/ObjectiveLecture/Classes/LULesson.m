@@ -8,10 +8,24 @@
 
 #import "LULesson.h"
 
+@interface LULesson ()
+
+@property (nonatomic, assign) BOOL passed;
+
+@end
+
 @implementation LULesson
 
 - (void)printObject {
     NSLog(@"%@ %@", self, self.title);
+}
+
+- (void)lalala {
+    self.passed = true;
+    
+    if (self.isPassed) {
+        NSLog(@"lalal");
+    }
 }
 
 @end
