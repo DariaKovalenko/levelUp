@@ -18,6 +18,23 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Hello, World!");
         
         
+        NSArray *array = @[];
+        @try
+        {
+            
+            NSString *string = array.count > 10 ? [array objectAtIndex:10] : nil;
+        }
+        @catch (NSException *exception)
+        {
+            NSLog(@"%@ ",exception.name);
+            NSLog(@"Reason: %@ ",exception.reason);
+        }
+        @finally
+        {
+            NSLog(@"@@finaly Always Executes");
+        }
+        
+        
         id <LUPrinter> object = [[LUPerson alloc] init];
         [object printObject];
         
@@ -54,8 +71,11 @@ int main(int argc, const char * argv[]) {
             NSLog(@"Current object is: %@", eachObject);
         }
         
+        __block NSInteger variableToSet = 4;
+        
         [persons enumerateObjectsUsingBlock:^(LUPerson * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             NSLog(@"object %@", obj);
+            variableToSet = 5;
         }];
         
         NSMutableArray *smallPersons = [NSMutableArray array];
@@ -86,6 +106,7 @@ int main(int argc, const char * argv[]) {
             return [person.fullName isEqualToString:@"Vasia Pupkin"];
         }];
         
+        //переменная с блоком
         BOOL (^maleFilter)(LUPerson *) = ^BOOL(LUPerson *person) {
             return person.sex == LUPersonMale;
         };
@@ -94,9 +115,11 @@ int main(int argc, const char * argv[]) {
             NSLog(@"%@", person);
         };
         
+        //переменная с блоком, тип которого определен через typedef
         LUPersonFilter femaleFilter = ^(LUPerson *person) {
             return (BOOL)(person.sex == LUPersonFemale);
         };
+        
         [persons filteredPersonsUsingBlock:femaleFilter];
         [persons enumeratePersonsUsingBlock:enumeratorBlock];
         

@@ -20,7 +20,10 @@
     NSLog(@"%@ %@", self, self.title);
 }
 
+#pragma mark - 
+
 - (void)lalala {
+    
     self.passed = true;
     
     if (self.isPassed) {

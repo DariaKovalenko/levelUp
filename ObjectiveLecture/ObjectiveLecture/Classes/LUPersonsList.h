@@ -12,6 +12,8 @@
 
 typedef BOOL (^PersonFilter)(LUPerson *person);
 
+typedef void (^VoidBlock)(void);
+
 @interface LUPersonsList : NSObject
 @property (nonatomic, copy) PersonFilter filterBlock;
 
