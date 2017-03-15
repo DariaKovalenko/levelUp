@@ -7,16 +7,20 @@
 //
 
 #import "AppDelegate.h"
+#import "LUAnotherViewController.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) UIViewController *rootViewController;
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+//    LUAnotherViewController *anotherController = [LUAnotherViewController new];
+//    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:anotherController];
+//    self.window.rootViewController = navVC;
+    
     return YES;
 }
 
