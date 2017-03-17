@@ -62,6 +62,7 @@ static NSString *LUShowSuperTitleController = @"ShowSuperTitle";
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSString *segueIdentifier = segue.identifier;
+    // add some data to controller
     if ([segueIdentifier isEqualToString:LUShowSuperTitleController]) {
         UIViewController *destination = segue.destinationViewController;
         destination.title = @"MY SUPERTITLE";
@@ -97,15 +98,25 @@ static NSString *LUShowSuperTitleController = @"ShowSuperTitle";
 }
 
 - (IBAction)showSupertitleClicked:(id)sender {
-    //    [self performSegueWithIdentifier:LUShowSuperTitleController sender:nil];
-    
-//    LUAnotherViewController *anotherController = [LUAnotherViewController new];
-//    anotherController.title = @"My Some Perfect title";
-    //    UIViewController *anotherController = [[UIStoryboard storyboardWithName:@"AnotherStoryboard" bundle:nil] instantiateInitialViewController];
-//    LUThirdViewController *anotherController = [[UIStoryboard another] viewControllerForClass:[LUThirdViewController class]];
-    
+    [self performSegueWithIdentifier:LUShowSuperTitleController sender:nil];
+}
+
+- (void)showFromXIB {
+    LUAnotherViewController *anotherController = [LUAnotherViewController new];
+    anotherController.title = @"My Some Perfect title";
+    [self.navigationController pushViewController:anotherController animated:YES];
+}
+
+- (void)showNotInitialFromStoryboard {
+    //    LUThirdViewController *anotherController = [[UIStoryboard another] viewControllerForClass:[LUThirdViewController class]];
     LUThirdViewController *anotherController = [LUThirdViewController viewControllerWithStoryboard:[UIStoryboard another]];
     
+    [self.navigationController pushViewController:anotherController animated:YES];
+}
+
+- (void)showFromInitialAnotherStoryboard {
+    UIViewController *anotherController = [[UIStoryboard storyboardWithName:@"AnotherStoryboard" bundle:nil] instantiateInitialViewController];
+    anotherController.title = @"some title"; // or put some data
     [self.navigationController pushViewController:anotherController animated:YES];
 }
 
