@@ -1,25 +1,22 @@
 //
 //  AppDelegate.m
-//  Picker
+//  TwoComponentPicker
 //
-//  Created by Daria on 3/13/17.
+//  Created by Daria on 3/20/17.
 //  Copyright © 2017 Daria. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "LUAnotherViewController.h"
 
 @interface AppDelegate ()
-@property (nonatomic, strong) UIViewController *rootViewController;
+
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    LUAnotherViewController *anotherController = [LUAnotherViewController new];
-//    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:anotherController];
-//    self.window.rootViewController = navVC;
+    // Override point for customization after application launch.
     return YES;
 }
 

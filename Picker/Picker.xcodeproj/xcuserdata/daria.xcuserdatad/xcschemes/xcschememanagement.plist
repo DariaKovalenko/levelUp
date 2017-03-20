@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>TwoComponentPicker.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -23,6 +28,21 @@
 			<true/>
 		</dict>
 		<key>4309C2FF1E7708F4000BC718</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>434E1F511E8056C00080E371</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>434E1F691E8056C00080E371</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>434E1F741E8056C00080E371</key>
 		<dict>
 			<key>primary</key>
 			<true/>

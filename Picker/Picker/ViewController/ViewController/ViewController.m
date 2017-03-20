@@ -101,6 +101,7 @@ static NSString *LUShowSuperTitleController = @"ShowSuperTitle";
     [self performSegueWithIdentifier:LUShowSuperTitleController sender:nil];
 }
 
+
 - (void)showFromXIB {
     LUAnotherViewController *anotherController = [LUAnotherViewController new];
     anotherController.title = @"My Some Perfect title";
@@ -114,7 +115,7 @@ static NSString *LUShowSuperTitleController = @"ShowSuperTitle";
     [self.navigationController pushViewController:anotherController animated:YES];
 }
 
-- (void)showFromInitialAnotherStoryboard {
+- (IBAction)showFromInitialAnotherStoryboard:(id)sender {
     UIViewController *anotherController = [[UIStoryboard storyboardWithName:@"AnotherStoryboard" bundle:nil] instantiateInitialViewController];
     anotherController.title = @"some title"; // or put some data
     [self.navigationController pushViewController:anotherController animated:YES];
