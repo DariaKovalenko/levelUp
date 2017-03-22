@@ -6,9 +6,9 @@
 //  Copyright © 2017 Daria. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "LUNibBasedView.h"
 
-IB_DESIGNABLE @interface CountryPickerView : UIView
+IB_DESIGNABLE @interface CountryPickerView : LUNibBasedView
 
 @property (nonatomic, strong) IBInspectable UIColor *pickerColor;
 

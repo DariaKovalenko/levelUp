@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -201,7 +200,7 @@
         <scene sceneID="539-4Q-SOJ">
             <objects>
                 <navigationController id="wOg-1L-oEz" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="J2n-Oi-gVU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J2n-Oi-gVU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.098039215690000001" green="0.56078431370000004" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>

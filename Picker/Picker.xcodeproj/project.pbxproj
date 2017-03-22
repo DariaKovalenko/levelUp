@@ -38,6 +38,7 @@
 		434E1F7A1E8056C00080E371 /* TwoComponentPickerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 434E1F791E8056C00080E371 /* TwoComponentPickerUITests.m */; };
 		434E1F861E8057F40080E371 /* UIStoryboard+LUExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 4309C38E1E79C32D000BC718 /* UIStoryboard+LUExtention.m */; };
 		434E1F871E8058140080E371 /* AnotherStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4309C3621E79BC34000BC718 /* AnotherStoryboard.storyboard */; };
+		434E1F8A1E82E8730080E371 /* LUNibBasedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 434E1F891E82E8730080E371 /* LUNibBasedView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,8 @@
 		434E1F751E8056C00080E371 /* TwoComponentPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwoComponentPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		434E1F791E8056C00080E371 /* TwoComponentPickerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoComponentPickerUITests.m; sourceTree = "<group>"; };
 		434E1F7B1E8056C00080E371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		434E1F881E82E8730080E371 /* LUNibBasedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUNibBasedView.h; sourceTree = "<group>"; };
+		434E1F891E82E8730080E371 /* LUNibBasedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUNibBasedView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				4309C3131E770FF7000BC718 /* CountryPickerView.h */,
+				434E1F881E82E8730080E371 /* LUNibBasedView.h */,
+				434E1F891E82E8730080E371 /* LUNibBasedView.m */,
 				4309C3141E770FF7000BC718 /* CountryPickerView.m */,
 				4309C3161E771007000BC718 /* CountryPickerView.xib */,
 			);
@@ -647,6 +652,7 @@
 				4309C3781E79BCCF000BC718 /* LUAnotherViewController.m in Sources */,
 				4309C2E11E7708F4000BC718 /* main.m in Sources */,
 				4309C3151E770FF7000BC718 /* CountryPickerView.m in Sources */,
+				434E1F8A1E82E8730080E371 /* LUNibBasedView.m in Sources */,
 				4309C38A1E79C1FF000BC718 /* LUThirdViewController.m in Sources */,
 				4309C3861E79BDDD000BC718 /* LUSecondViewController.m in Sources */,
 			);
@@ -1030,6 +1036,7 @@
 				434E1F7E1E8056C00080E371 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		434E1F7F1E8056C00080E371 /* Build configuration list for PBXNativeTarget "TwoComponentPickerTests" */ = {
 			isa = XCConfigurationList;
@@ -1038,6 +1045,7 @@
 				434E1F811E8056C00080E371 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		434E1F821E8056C00080E371 /* Build configuration list for PBXNativeTarget "TwoComponentPickerUITests" */ = {
 			isa = XCConfigurationList;
@@ -1046,6 +1054,7 @@
 				434E1F841E8056C00080E371 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
