@@ -17,6 +17,12 @@
 		434E1FBD1E82E9990080E371 /* NavigationControllersUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 434E1FBC1E82E9990080E371 /* NavigationControllersUITests.m */; };
 		434E1FCC1E82E9E00080E371 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434E1FCB1E82E9E00080E371 /* ModalViewController.m */; };
 		434E1FCF1E82EE8E0080E371 /* AnotherModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434E1FCE1E82EE8E0080E371 /* AnotherModalViewController.m */; };
+		434E1FD21E8592850080E371 /* LUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434E1FD11E8592850080E371 /* LUViewController.m */; };
+		434E1FD51E8593B40080E371 /* LUTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434E1FD41E8593B40080E371 /* LUTabbarViewController.m */; };
+		434E1FD71E85951E0080E371 /* MainFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434E1FD61E85951E0080E371 /* MainFlow.storyboard */; };
+		434E1FD91E85954E0080E371 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434E1FD81E85954E0080E371 /* Profile.storyboard */; };
+		434E1FE01E85967D0080E371 /* UIStoryboard+LUExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 434E1FDD1E85967D0080E371 /* UIStoryboard+LUExtention.m */; };
+		434E1FE11E85967D0080E371 /* UIViewController+LUExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = 434E1FDF1E85967D0080E371 /* UIViewController+LUExtentions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,16 @@
 		434E1FCB1E82E9E00080E371 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
 		434E1FCD1E82EE8E0080E371 /* AnotherModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnotherModalViewController.h; sourceTree = "<group>"; };
 		434E1FCE1E82EE8E0080E371 /* AnotherModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotherModalViewController.m; sourceTree = "<group>"; };
+		434E1FD01E8592850080E371 /* LUViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUViewController.h; sourceTree = "<group>"; };
+		434E1FD11E8592850080E371 /* LUViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUViewController.m; sourceTree = "<group>"; };
+		434E1FD31E8593B40080E371 /* LUTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUTabbarViewController.h; sourceTree = "<group>"; };
+		434E1FD41E8593B40080E371 /* LUTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUTabbarViewController.m; sourceTree = "<group>"; };
+		434E1FD61E85951E0080E371 /* MainFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainFlow.storyboard; sourceTree = "<group>"; };
+		434E1FD81E85954E0080E371 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		434E1FDC1E85967D0080E371 /* UIStoryboard+LUExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+LUExtention.h"; sourceTree = "<group>"; };
+		434E1FDD1E85967D0080E371 /* UIStoryboard+LUExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+LUExtention.m"; sourceTree = "<group>"; };
+		434E1FDE1E85967D0080E371 /* UIViewController+LUExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LUExtentions.h"; sourceTree = "<group>"; };
+		434E1FDF1E85967D0080E371 /* UIViewController+LUExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LUExtentions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,13 +125,20 @@
 			children = (
 				434E1F9A1E82E9990080E371 /* AppDelegate.h */,
 				434E1F9B1E82E9990080E371 /* AppDelegate.m */,
+				434E1FD31E8593B40080E371 /* LUTabbarViewController.h */,
+				434E1FD41E8593B40080E371 /* LUTabbarViewController.m */,
 				434E1F9D1E82E9990080E371 /* ViewController.h */,
 				434E1F9E1E82E9990080E371 /* ViewController.m */,
 				434E1FCA1E82E9E00080E371 /* ModalViewController.h */,
 				434E1FCB1E82E9E00080E371 /* ModalViewController.m */,
 				434E1FCD1E82EE8E0080E371 /* AnotherModalViewController.h */,
 				434E1FCE1E82EE8E0080E371 /* AnotherModalViewController.m */,
+				434E1FD01E8592850080E371 /* LUViewController.h */,
+				434E1FD11E8592850080E371 /* LUViewController.m */,
 				434E1FA01E82E9990080E371 /* Main.storyboard */,
+				434E1FD61E85951E0080E371 /* MainFlow.storyboard */,
+				434E1FD81E85954E0080E371 /* Profile.storyboard */,
+				434E1FDA1E85967D0080E371 /* Utilities */,
 				434E1FA31E82E9990080E371 /* Assets.xcassets */,
 				434E1FA51E82E9990080E371 /* LaunchScreen.storyboard */,
 				434E1FA81E82E9990080E371 /* Info.plist */,
@@ -148,6 +171,25 @@
 				434E1FBE1E82E9990080E371 /* Info.plist */,
 			);
 			path = NavigationControllersUITests;
+			sourceTree = "<group>";
+		};
+		434E1FDA1E85967D0080E371 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				434E1FDB1E85967D0080E371 /* Categories */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		434E1FDB1E85967D0080E371 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				434E1FDC1E85967D0080E371 /* UIStoryboard+LUExtention.h */,
+				434E1FDD1E85967D0080E371 /* UIStoryboard+LUExtention.m */,
+				434E1FDE1E85967D0080E371 /* UIViewController+LUExtentions.h */,
+				434E1FDF1E85967D0080E371 /* UIViewController+LUExtentions.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +300,9 @@
 			files = (
 				434E1FA71E82E9990080E371 /* LaunchScreen.storyboard in Resources */,
 				434E1FA41E82E9990080E371 /* Assets.xcassets in Resources */,
+				434E1FD91E85954E0080E371 /* Profile.storyboard in Resources */,
 				434E1FA21E82E9990080E371 /* Main.storyboard in Resources */,
+				434E1FD71E85951E0080E371 /* MainFlow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,9 +329,13 @@
 			files = (
 				434E1FCC1E82E9E00080E371 /* ModalViewController.m in Sources */,
 				434E1F9F1E82E9990080E371 /* ViewController.m in Sources */,
+				434E1FD51E8593B40080E371 /* LUTabbarViewController.m in Sources */,
+				434E1FE11E85967D0080E371 /* UIViewController+LUExtentions.m in Sources */,
 				434E1FCF1E82EE8E0080E371 /* AnotherModalViewController.m in Sources */,
 				434E1F9C1E82E9990080E371 /* AppDelegate.m in Sources */,
 				434E1F991E82E9990080E371 /* main.m in Sources */,
+				434E1FE01E85967D0080E371 /* UIStoryboard+LUExtention.m in Sources */,
+				434E1FD21E8592850080E371 /* LUViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +567,7 @@
 				434E1FC31E82E9990080E371 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		434E1FC41E82E9990080E371 /* Build configuration list for PBXNativeTarget "NavigationControllersTests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +576,7 @@
 				434E1FC61E82E9990080E371 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		434E1FC71E82E9990080E371 /* Build configuration list for PBXNativeTarget "NavigationControllersUITests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +585,7 @@
 				434E1FC91E82E9990080E371 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
