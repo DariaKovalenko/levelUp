@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UITableView+LUExtentions.h
 //  TableView
 //
 //  Created by Daria on 3/29/17.
@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@interface UITableView (LUExtentions)
 
+- (void)perfomUpdates:(void(^)(void))handler;
 
 @end
-

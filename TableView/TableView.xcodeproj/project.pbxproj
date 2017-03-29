@@ -17,6 +17,8 @@
 		43B8439D1E8C110C00D66212 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B8439C1E8C110C00D66212 /* ViewController.m */; };
 		43B843A01E8C161E00D66212 /* LUTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B8439F1E8C161E00D66212 /* LUTableViewCell.m */; };
 		43B843A41E8C176B00D66212 /* LUPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B843A31E8C176B00D66212 /* LUPerson.m */; };
+		43B843A71E8C1BBF00D66212 /* LUPersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B843A61E8C1BBF00D66212 /* LUPersonCell.m */; };
+		43B843AB1E8C28D000D66212 /* UITableView+LUExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B843AA1E8C28D000D66212 /* UITableView+LUExtentions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		43B8439F1E8C161E00D66212 /* LUTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUTableViewCell.m; sourceTree = "<group>"; };
 		43B843A21E8C176B00D66212 /* LUPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUPerson.h; sourceTree = "<group>"; };
 		43B843A31E8C176B00D66212 /* LUPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUPerson.m; sourceTree = "<group>"; };
+		43B843A51E8C1BBF00D66212 /* LUPersonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUPersonCell.h; sourceTree = "<group>"; };
+		43B843A61E8C1BBF00D66212 /* LUPersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUPersonCell.m; sourceTree = "<group>"; };
+		43B843A91E8C28D000D66212 /* UITableView+LUExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+LUExtentions.h"; sourceTree = "<group>"; };
+		43B843AA1E8C28D000D66212 /* UITableView+LUExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+LUExtentions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,7 @@
 				43B8436B1E8C10DD00D66212 /* AppDelegate.m */,
 				43B843701E8C10DD00D66212 /* Main.storyboard */,
 				43B843731E8C10DD00D66212 /* Assets.xcassets */,
+				43B843A81E8C28AD00D66212 /* Extentions */,
 				43B843A11E8C175900D66212 /* Models */,
 				43B8439A1E8C110C00D66212 /* UI */,
 				43B843751E8C10DD00D66212 /* LaunchScreen.storyboard */,
@@ -153,6 +160,8 @@
 				43B8439C1E8C110C00D66212 /* ViewController.m */,
 				43B8439E1E8C161E00D66212 /* LUTableViewCell.h */,
 				43B8439F1E8C161E00D66212 /* LUTableViewCell.m */,
+				43B843A51E8C1BBF00D66212 /* LUPersonCell.h */,
+				43B843A61E8C1BBF00D66212 /* LUPersonCell.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -164,6 +173,15 @@
 				43B843A31E8C176B00D66212 /* LUPerson.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		43B843A81E8C28AD00D66212 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				43B843A91E8C28D000D66212 /* UITableView+LUExtentions.h */,
+				43B843AA1E8C28D000D66212 /* UITableView+LUExtentions.m */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +322,8 @@
 				43B8439D1E8C110C00D66212 /* ViewController.m in Sources */,
 				43B843A41E8C176B00D66212 /* LUPerson.m in Sources */,
 				43B843691E8C10DD00D66212 /* main.m in Sources */,
+				43B843AB1E8C28D000D66212 /* UITableView+LUExtentions.m in Sources */,
+				43B843A71E8C1BBF00D66212 /* LUPersonCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
