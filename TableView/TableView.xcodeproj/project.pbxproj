@@ -19,6 +19,10 @@
 		43B843A41E8C176B00D66212 /* LUPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B843A31E8C176B00D66212 /* LUPerson.m */; };
 		43B843A71E8C1BBF00D66212 /* LUPersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B843A61E8C1BBF00D66212 /* LUPersonCell.m */; };
 		43B843AB1E8C28D000D66212 /* UITableView+LUExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B843AA1E8C28D000D66212 /* UITableView+LUExtentions.m */; };
+		43E1DF6C1E92AA3600D96063 /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E1DF6B1E92AA3600D96063 /* PersonViewController.m */; };
+		43E1DF701E92AB5E00D96063 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E1DF6F1E92AB5E00D96063 /* TextFieldCell.m */; };
+		43E1DF731E92AB7900D96063 /* TextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E1DF721E92AB7900D96063 /* TextViewCell.m */; };
+		43E1DF761E92AB8800D96063 /* UserImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E1DF751E92AB8800D96063 /* UserImageCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,14 @@
 		43B843A61E8C1BBF00D66212 /* LUPersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUPersonCell.m; sourceTree = "<group>"; };
 		43B843A91E8C28D000D66212 /* UITableView+LUExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+LUExtentions.h"; sourceTree = "<group>"; };
 		43B843AA1E8C28D000D66212 /* UITableView+LUExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+LUExtentions.m"; sourceTree = "<group>"; };
+		43E1DF6A1E92AA3600D96063 /* PersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
+		43E1DF6B1E92AA3600D96063 /* PersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
+		43E1DF6E1E92AB5E00D96063 /* TextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldCell.h; sourceTree = "<group>"; };
+		43E1DF6F1E92AB5E00D96063 /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldCell.m; sourceTree = "<group>"; };
+		43E1DF711E92AB7900D96063 /* TextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewCell.h; sourceTree = "<group>"; };
+		43E1DF721E92AB7900D96063 /* TextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewCell.m; sourceTree = "<group>"; };
+		43E1DF741E92AB8800D96063 /* UserImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserImageCell.h; sourceTree = "<group>"; };
+		43E1DF751E92AB8800D96063 /* UserImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserImageCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +174,9 @@
 				43B8439F1E8C161E00D66212 /* LUTableViewCell.m */,
 				43B843A51E8C1BBF00D66212 /* LUPersonCell.h */,
 				43B843A61E8C1BBF00D66212 /* LUPersonCell.m */,
+				43E1DF6A1E92AA3600D96063 /* PersonViewController.h */,
+				43E1DF6B1E92AA3600D96063 /* PersonViewController.m */,
+				43E1DF6D1E92AB4400D96063 /* Cells */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -182,6 +197,19 @@
 				43B843AA1E8C28D000D66212 /* UITableView+LUExtentions.m */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		43E1DF6D1E92AB4400D96063 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				43E1DF6E1E92AB5E00D96063 /* TextFieldCell.h */,
+				43E1DF6F1E92AB5E00D96063 /* TextFieldCell.m */,
+				43E1DF711E92AB7900D96063 /* TextViewCell.h */,
+				43E1DF721E92AB7900D96063 /* TextViewCell.m */,
+				43E1DF741E92AB8800D96063 /* UserImageCell.h */,
+				43E1DF751E92AB8800D96063 /* UserImageCell.m */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,13 +345,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43E1DF761E92AB8800D96063 /* UserImageCell.m in Sources */,
 				43B843A01E8C161E00D66212 /* LUTableViewCell.m in Sources */,
 				43B8436C1E8C10DD00D66212 /* AppDelegate.m in Sources */,
 				43B8439D1E8C110C00D66212 /* ViewController.m in Sources */,
 				43B843A41E8C176B00D66212 /* LUPerson.m in Sources */,
 				43B843691E8C10DD00D66212 /* main.m in Sources */,
 				43B843AB1E8C28D000D66212 /* UITableView+LUExtentions.m in Sources */,
+				43E1DF701E92AB5E00D96063 /* TextFieldCell.m in Sources */,
 				43B843A71E8C1BBF00D66212 /* LUPersonCell.m in Sources */,
+				43E1DF6C1E92AA3600D96063 /* PersonViewController.m in Sources */,
+				43E1DF731E92AB7900D96063 /* TextViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +587,7 @@
 				43B843931E8C10DD00D66212 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43B843941E8C10DD00D66212 /* Build configuration list for PBXNativeTarget "TableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -563,6 +596,7 @@
 				43B843961E8C10DD00D66212 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43B843971E8C10DD00D66212 /* Build configuration list for PBXNativeTarget "TableViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -571,6 +605,7 @@
 				43B843991E8C10DD00D66212 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

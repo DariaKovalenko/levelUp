@@ -10,6 +10,8 @@
 #import "LUPerson.h"
 #import "LUTableViewCell.h"
 #import "LUPersonCell.h"
+#import "PersonViewController.h"
+
 #import "UITableView+LUExtentions.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -24,35 +26,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView reloadData];
-    self.persons = [@[
-//                     [LUPerson personWithFirstName:@"Ivan" lastName:@"Ivanov"],
-//                     [LUPerson personWithFirstName:@"Peter" lastName:@"Pertov"],
-//                     [LUPerson personWithFirstName:@"Sidor" lastName:@"Sidorov"],
-//                     [LUPerson personWithFirstName:@"Vasia" lastName:@"Pupkin"],
-//                     [LUPerson personWithFirstName:@"Ivan" lastName:@"Ivanov"],
-//                     [LUPerson personWithFirstName:@"Peter" lastName:@"Pertov"],
-//                     [LUPerson personWithFirstName:@"Sidor" lastName:@"Sidorov"],
-//                     [LUPerson personWithFirstName:@"Vasia" lastName:@"Pupkin"],
-//                     [LUPerson personWithFirstName:@"Ivan" lastName:@"Ivanov"],
-//                     [LUPerson personWithFirstName:@"Peter" lastName:@"Pertov"],
-//                     [LUPerson personWithFirstName:@"Sidor" lastName:@"Sidorov"],
-//                     [LUPerson personWithFirstName:@"Vasia" lastName:@"Pupkin"],
-//                     [LUPerson personWithFirstName:@"Ivan" lastName:@"Ivanov"],
-//                     [LUPerson personWithFirstName:@"Peter" lastName:@"Pertov"],
-//                     [LUPerson personWithFirstName:@"Sidor" lastName:@"Sidorov"],
-//                     [LUPerson personWithFirstName:@"Vasia" lastName:@"Pupkin"]
-                      ] mutableCopy];
+    self.persons = [@[] mutableCopy];
 }
 
 - (void)showPersonAlert {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Create Person" message:nil preferredStyle:UIAlertControllerStyleAlert];
-    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        [textField addTarget:self action:@selector(textChanged:) forControlEvents:UIControlEventEditingChanged];
-    }];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self createPerson];
-    }]];
-    [self presentViewController:alertController animated:YES completion:nil];
+    [self performSegueWithIdentifier:@"AddPerson" sender:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    id destinationController = [segue destinationViewController];
+    if ([destinationController isKindOfClass:[PersonViewController class]]) {
+        [destinationController setPersonHandler:^(LUPerson *person){
+            [self insertPerson:person];
+        }];
+    }
 }
 
 #pragma mark - UITextFieldDelegate
@@ -66,13 +53,17 @@
     if (!self.personName.length) return;
     
     LUPerson *person = [LUPerson personWithFirstName:self.personName lastName:nil];
+    [self insertPerson:person];
+}
+
+- (void)insertPerson:(LUPerson *)person {
     [self.persons addObject:person];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.persons.count - 1 inSection:0];
     __weak typeof(self) weakSelf = self;
     [self.tableView perfomUpdates:^{
         [weakSelf.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }];
-//    [self.tableView reloadData];
+
 }
 
 #pragma mark - UITableViewDataSource Methods
