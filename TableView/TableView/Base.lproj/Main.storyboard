@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O9g-xB-1F1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O9g-xB-1F1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hZb-wB-BtB" id="Nqx-wX-N7D">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS3-XL-CFh">
@@ -55,7 +55,7 @@
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cgi-Pr-oGf" id="K3n-dC-ga2">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igO-QW-Awq">
@@ -184,7 +184,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vax-la-bur">
-                                                    <rect key="frame" x="147" y="3" width="80" height="74"/>
+                                                    <rect key="frame" x="150" y="3" width="74" height="74"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="0.37909613720000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="74" id="6MJ-Fg-hSf">
@@ -192,12 +192,26 @@
                                                                 <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="37"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </constraint>
-                                                        <constraint firstAttribute="width" constant="80" id="Tsq-bm-3Tx"/>
+                                                        <constraint firstAttribute="width" constant="74" id="Tsq-bm-3Tx"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="37"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEM-Ui-6HF">
+                                                    <rect key="frame" x="150" y="3" width="74" height="74"/>
+                                                    <connections>
+                                                        <action selector="takeImageClicked:" destination="xHW-Cj-BgM" eventType="touchUpInside" id="FZI-Zh-n8v"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="vax-la-bur" firstAttribute="top" secondItem="Ddg-p7-eJX" secondAttribute="top" constant="3" id="64I-v1-W7T"/>
+                                                <constraint firstItem="YEM-Ui-6HF" firstAttribute="leading" secondItem="vax-la-bur" secondAttribute="leading" id="IGU-3J-ZGJ"/>
+                                                <constraint firstItem="YEM-Ui-6HF" firstAttribute="top" secondItem="vax-la-bur" secondAttribute="top" id="Nyq-OV-nUb"/>
+                                                <constraint firstItem="YEM-Ui-6HF" firstAttribute="trailing" secondItem="vax-la-bur" secondAttribute="trailing" id="RxL-gV-Cjz"/>
+                                                <constraint firstItem="YEM-Ui-6HF" firstAttribute="bottom" secondItem="vax-la-bur" secondAttribute="bottom" id="UYw-AM-yMg"/>
                                                 <constraint firstAttribute="bottom" secondItem="vax-la-bur" secondAttribute="bottom" constant="4.5" id="e7x-tv-K3C"/>
                                                 <constraint firstItem="vax-la-bur" firstAttribute="centerX" secondItem="Ddg-p7-eJX" secondAttribute="centerX" id="lJn-Lz-AxO"/>
                                             </constraints>

@@ -27,6 +27,10 @@
     [super viewDidLoad];
     [self.tableView reloadData];
     self.persons = [@[] mutableCopy];
+    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
+    header.backgroundColor = [UIColor redColor];
+    self.tableView.tableHeaderView = header;
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)showPersonAlert {
@@ -77,6 +81,8 @@
         NSString *identifier = NSStringFromClass([LUPersonCell class]);
         LUPersonCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
         LUPerson *person = self.persons[indexPath.row];
+        cell.imageView.image = person.icon;
+        cell.imageView.layer.masksToBounds = YES;
         [cell fillWithPerson:person];
         
         return cell;
@@ -89,9 +95,29 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == self.persons.count) {
-//        [tableView deselectRowAtIndexPath:indexPath animated:YES];
         [self showPersonAlert];
     }
+}
+
+- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    UITableViewRowAction *action = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"Delete" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        [self removePersonAtIndexPath:indexPath];
+    }];
+ 
+    return @[action];
+}
+
+- (void)removePersonAtIndexPath:(NSIndexPath *)indexPath {
+    [self.persons removeObjectAtIndex:indexPath.row];
+    __weak typeof(self) weakSelf = self;
+    [self.tableView perfomUpdates:^{
+        [weakSelf.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return indexPath.row < self.persons.count;
 }
 
 @end

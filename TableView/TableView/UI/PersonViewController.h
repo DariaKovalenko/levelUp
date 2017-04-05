@@ -19,5 +19,7 @@ typedef void (^LUPersonBlock)(LUPerson *person);
 
 - (IBAction)textChanged:(UITextField *)sender;
 - (IBAction)savePerson:(id)sender;
+- (IBAction)takeImageClicked:(id)sender;
+
 
 @end

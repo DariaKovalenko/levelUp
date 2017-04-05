@@ -23,7 +23,7 @@ typedef enum {
     LUPersonPropertyCount
 } LUPersonProperty;
 
-@interface PersonViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface PersonViewController () <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong) LUPerson *person;
 @property (nonatomic, strong) IBOutlet UITextView *textView;
 
@@ -61,6 +61,39 @@ typedef enum {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)takeImageClicked:(id)sender {
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        UIAlertController *selectionController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        [selectionController addAction:[UIAlertAction actionWithTitle:@"Take photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self showPickerForSource:UIImagePickerControllerSourceTypeCamera];
+        }]];
+        [selectionController addAction:[UIAlertAction actionWithTitle:@"Select from album" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self showPickerForSource:UIImagePickerControllerSourceTypePhotoLibrary];
+        }]];
+        [selectionController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {}]];
+        [self presentViewController:selectionController animated:YES completion:nil];
+    } else {
+        [self showPickerForSource:UIImagePickerControllerSourceTypePhotoLibrary];
+    }
+}
+    
+- (void)showPickerForSource:(UIImagePickerControllerSourceType)source {
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.sourceType = source;
+    imagePicker.editing = YES;
+    imagePicker.delegate = self;
+    [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
+#pragma mark - UIImagePickerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    self.person.icon = image;
+    [self.tableView reloadData];
+    
+    [self dismissViewControllerAnimated:picker completion:nil];
+}
 
 #pragma mark - TableViewDataSource methods
 
@@ -72,7 +105,7 @@ typedef enum {
     switch (indexPath.row) {
         case LUPersonImage: {
             UserImageCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UserImageCell class])];
-            cell.imageView.image = self.person.icon;
+            cell.userImageView.image = self.person.icon;
             return cell;
         }
         case LUPersonAbout: {
@@ -96,8 +129,7 @@ typedef enum {
             
             break;
     }
-    return nil;
-    
+    return nil;    
 }
 
 - (NSString *)placeholderRow:(NSInteger)row {
