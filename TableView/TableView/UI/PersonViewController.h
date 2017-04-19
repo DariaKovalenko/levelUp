@@ -13,6 +13,8 @@
 typedef void (^LUPersonBlock)(LUPerson *person);
 
 @interface PersonViewController : UIViewController
+@property (nonatomic, strong) LUPerson *person;
+
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @property (nonatomic, copy) LUPersonBlock personHandler;

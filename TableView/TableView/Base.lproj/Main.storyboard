@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O9g-xB-1F1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O9g-xB-1F1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -49,6 +49,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="vS3-XL-CFh" id="ojT-1u-TSh"/>
+                                            <segue destination="xHW-Cj-BgM" kind="show" identifier="CellSelected" id="sQA-xm-R5Z"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LUTableViewCell" id="Cgi-Pr-oGf" customClass="LUTableViewCell">
@@ -236,6 +237,7 @@
                                                     <state key="normal" title="Add Person"/>
                                                     <connections>
                                                         <action selector="savePerson:" destination="xHW-Cj-BgM" eventType="touchUpInside" id="u8Q-K5-1Lf"/>
+                                                        <segue destination="8Ay-l6-FT1" kind="unwind" unwindAction="goBack:" id="Qam-Lp-Kpn"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -267,6 +269,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ovp-B4-bUQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8Ay-l6-FT1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="908" y="138.98050974512745"/>
         </scene>
@@ -287,4 +290,7 @@
             <point key="canvasLocation" x="-718" y="139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="sQA-xm-R5Z"/>
+    </inferredMetricsTieBreakers>
 </document>

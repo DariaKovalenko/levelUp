@@ -24,7 +24,6 @@ typedef enum {
 } LUPersonProperty;
 
 @interface PersonViewController () <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-@property (nonatomic, strong) LUPerson *person;
 @property (nonatomic, strong) IBOutlet UITextView *textView;
 
 @end
@@ -33,7 +32,10 @@ typedef enum {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.person = [LUPerson new];
+    if (!self.person) {
+        self.person = [LUPerson new];
+    }
+
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
@@ -58,7 +60,7 @@ typedef enum {
         self.personHandler(self.person);
     }
     
-    [self.navigationController popViewControllerAnimated:YES];
+//    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)takeImageClicked:(id)sender {
@@ -122,6 +124,7 @@ typedef enum {
         {
             TextFieldCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TextFieldCell class])];
             cell.textField.placeholder = [self placeholderRow:indexPath.row];
+            cell.textField.text = [self textForRow:indexPath.row];
             cell.textField.tag = indexPath.row;
             [cell.textField addTarget:self action:@selector(textChanged:) forControlEvents:UIControlEventEditingChanged];
             return cell;
@@ -142,6 +145,22 @@ typedef enum {
             return @"Birthday";
         case LUPersonCounty:
             return @"Country";
+        default:
+            return @"";
+    }
+}
+
+- (NSString *)textForRow:(NSInteger)row {
+    LUPerson *person = self.person;
+    switch (row) {
+        case LUPersonFirstName:
+            return person.firstName;
+        case LUPersonLastName:
+            return person.lastName;
+        case LUPersonBirthday:
+            return @"Birthday";
+        case LUPersonCounty:
+            return person.country;
         default:
             return @"";
     }

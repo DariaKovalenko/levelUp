@@ -24,4 +24,13 @@
     return self;
 }
 
+#pragma mark - Accessors
+
+- (void)setFirstName:(NSString *)firstName {
+    _firstName = firstName;
+    if (self.updateHandler) {
+        self.updateHandler(self);
+    }
+}
+
 @end

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class LUPerson;
+
+typedef void (^LUPersonBlock)(LUPerson *);
+
 @interface LUPerson : NSObject
 @property (nonatomic, strong) NSString *firstName;
 @property (nonatomic, strong) NSString *lastName;
@@ -15,6 +19,8 @@
 @property (nonatomic, strong) NSString *about;
 @property (nonatomic, strong) NSString *country;
 @property (nonatomic, strong) UIImage *icon;
+
+@property (nonatomic, copy) LUPersonBlock updateHandler;
 
 + (LUPerson *)personWithFirstName:(NSString *)firstName lastName:(NSString *)lastName;
 

@@ -27,9 +27,13 @@
     [super viewDidLoad];
     [self.tableView reloadData];
     self.persons = [@[] mutableCopy];
-    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
-    header.backgroundColor = [UIColor redColor];
-    self.tableView.tableHeaderView = header;
+    
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(reloadData) forControlEvents:UIControlEventValueChanged];
+    self.tableView.refreshControl = refreshControl;
+//    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
+//    header.backgroundColor = [UIColor redColor];
+//    self.tableView.tableHeaderView = header;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
@@ -37,17 +41,38 @@
     [self performSegueWithIdentifier:@"AddPerson" sender:nil];
 }
 
+- (void)reloadData {
+    [self.tableView reloadData];
+    [self.tableView.refreshControl endRefreshing];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     id destinationController = [segue destinationViewController];
-    if ([destinationController isKindOfClass:[PersonViewController class]]) {
-        [destinationController setPersonHandler:^(LUPerson *person){
-            [self insertPerson:person];
-        }];
+    
+    if ([[segue identifier] isEqualToString:@"CellSelected"]) {
+        LUPersonCell *cell = sender;
+        PersonViewController *personViewController = destinationController;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        personViewController.person = self.persons[indexPath.row];
+//        personViewController.personHandler = ^(LUPerson *person) {
+//            [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+//        };
+    } else {
+        if ([destinationController isKindOfClass:[PersonViewController class]]) {
+            [destinationController setPersonHandler:^(LUPerson *person){
+                [self insertPerson:person];
+            }];
+        }
     }
 }
 
-#pragma mark - UITextFieldDelegate
+#pragma mark - Actions
 
+- (IBAction)goBack:(UIStoryboardSegue *)segue {
+
+}
+
+#pragma mark - UITextFieldDelegate
 
 - (void)textChanged:(UITextField *)textField {
     self.personName = textField.text;
