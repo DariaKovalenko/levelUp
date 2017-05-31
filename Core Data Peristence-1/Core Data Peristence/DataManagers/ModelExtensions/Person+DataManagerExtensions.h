@@ -22,4 +22,6 @@
                           street:(NSString *)street
                             code:(NSString *)code;
 
++ (NSArray *)personsSearchedWithString:(NSString *)string;
+
 @end

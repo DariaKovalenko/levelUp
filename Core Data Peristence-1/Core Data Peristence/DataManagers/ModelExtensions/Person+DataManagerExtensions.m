@@ -20,6 +20,7 @@ static NSString * const kPerson = @"Person";
     NSError *error = nil;
     
     NSFetchRequest *request = [self fetchRequest];
+    request.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"firstname" ascending:YES]]];
     //    request.predicate = [NSPredicate predicateWithFormat:@"%K == %@", @"firstname", @"Anna"];
     NSArray *objects = [context executeFetchRequest:request error:&error];
     
@@ -64,6 +65,25 @@ static NSString * const kPerson = @"Person";
         [newAddress addPersonsObject:self];
         [[BIDDataController sharedInstanse] saveContext];
     }
+}
+
++ (NSArray *)personsSearchedWithString:(NSString *)string {
+    NSArray *parameters = [[string stringByReplacingOccurrencesOfString:@"," withString:@" "] componentsSeparatedByString:@" "];
+    NSLog(@"%@", parameters);
+
+    if (parameters.count > 2) {
+        NSString *firstName = parameters[0];
+        NSString *lastName = parameters[1];
+        NSString *country = parameters[2];
+        
+        NSError *error = nil;
+        NSFetchRequest *request = [self fetchRequest];
+        request.predicate = [NSPredicate predicateWithFormat:@"firstname == %@ AND lastname == %@ AND address.country == %@", firstName, lastName, country];
+        
+        return [[[BIDDataController sharedInstanse] managedObjectContext] executeFetchRequest:request error:&error];
+    }
+    
+    return nil;
 }
 
 

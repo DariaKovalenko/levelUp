@@ -91,4 +91,15 @@
     return @[action];
 }
 
+#pragma mark - Search bar delegate methods
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    if (searchText.length) {
+        self.persons = [Person personsSearchedWithString:searchText];
+        [self.personsTableView reloadData];
+    } else {
+        [self reloadAllData];
+    }
+}
+
 @end

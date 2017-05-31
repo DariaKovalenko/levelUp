@@ -5,7 +5,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BIDViewController : UIViewController
+@interface BIDViewController : UIViewController <UISearchBarDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *personsTableView;
 
 @end
