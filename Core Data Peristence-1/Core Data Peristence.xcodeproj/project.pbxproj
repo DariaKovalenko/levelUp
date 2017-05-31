@@ -11,8 +11,12 @@
 		43B15F221ED5E75700354A5F /* StoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B15F1F1ED5E75700354A5F /* StoreController.m */; };
 		43EF10511EDC822100D41A21 /* BIDPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EF104F1EDC822100D41A21 /* BIDPersonViewController.m */; };
 		43EF10521EDC822100D41A21 /* BIDPersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43EF10501EDC822100D41A21 /* BIDPersonViewController.xib */; };
-		43EF10571EDC86BE00D41A21 /* Person+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EF10541EDC86BE00D41A21 /* Person+CoreDataClass.m */; };
-		43EF10581EDC86BE00D41A21 /* Person+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EF10561EDC86BE00D41A21 /* Person+CoreDataProperties.m */; };
+		43EF10691EDF225A00D41A21 /* Person+DataManagerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EF10681EDF225A00D41A21 /* Person+DataManagerExtensions.m */; };
+		43EF10721EDF22FA00D41A21 /* Person+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EF106B1EDF22FA00D41A21 /* Person+CoreDataClass.m */; };
+		43EF10731EDF22FA00D41A21 /* Person+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EF106D1EDF22FA00D41A21 /* Person+CoreDataProperties.m */; };
+		43EF10741EDF22FA00D41A21 /* Address+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EF106F1EDF22FA00D41A21 /* Address+CoreDataClass.m */; };
+		43EF10751EDF22FA00D41A21 /* Address+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EF10711EDF22FA00D41A21 /* Address+CoreDataProperties.m */; };
+		43EF10781EDF253800D41A21 /* Address+BIDataManagerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EF10771EDF253800D41A21 /* Address+BIDataManagerExtensions.m */; };
 		A6E06EFA1605DD55007A517B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E06EF91605DD55007A517B /* UIKit.framework */; };
 		A6E06EFC1605DD55007A517B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E06EFB1605DD55007A517B /* Foundation.framework */; };
 		A6E06EFE1605DD55007A517B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E06EFD1605DD55007A517B /* CoreGraphics.framework */; };
@@ -36,10 +40,18 @@
 		43EF104E1EDC822100D41A21 /* BIDPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDPersonViewController.h; sourceTree = "<group>"; };
 		43EF104F1EDC822100D41A21 /* BIDPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDPersonViewController.m; sourceTree = "<group>"; };
 		43EF10501EDC822100D41A21 /* BIDPersonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BIDPersonViewController.xib; sourceTree = "<group>"; };
-		43EF10531EDC86BE00D41A21 /* Person+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Person+CoreDataClass.h"; path = "Core Data Peristence/Person+CoreDataClass.h"; sourceTree = "<group>"; };
-		43EF10541EDC86BE00D41A21 /* Person+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Person+CoreDataClass.m"; path = "Core Data Peristence/Person+CoreDataClass.m"; sourceTree = "<group>"; };
-		43EF10551EDC86BE00D41A21 /* Person+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Person+CoreDataProperties.h"; path = "Core Data Peristence/Person+CoreDataProperties.h"; sourceTree = "<group>"; };
-		43EF10561EDC86BE00D41A21 /* Person+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Person+CoreDataProperties.m"; path = "Core Data Peristence/Person+CoreDataProperties.m"; sourceTree = "<group>"; };
+		43EF10671EDF225A00D41A21 /* Person+DataManagerExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+DataManagerExtensions.h"; sourceTree = "<group>"; };
+		43EF10681EDF225A00D41A21 /* Person+DataManagerExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+DataManagerExtensions.m"; sourceTree = "<group>"; };
+		43EF106A1EDF22FA00D41A21 /* Person+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+CoreDataClass.h"; sourceTree = "<group>"; };
+		43EF106B1EDF22FA00D41A21 /* Person+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+CoreDataClass.m"; sourceTree = "<group>"; };
+		43EF106C1EDF22FA00D41A21 /* Person+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+CoreDataProperties.h"; sourceTree = "<group>"; };
+		43EF106D1EDF22FA00D41A21 /* Person+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+CoreDataProperties.m"; sourceTree = "<group>"; };
+		43EF106E1EDF22FA00D41A21 /* Address+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Address+CoreDataClass.h"; sourceTree = "<group>"; };
+		43EF106F1EDF22FA00D41A21 /* Address+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Address+CoreDataClass.m"; sourceTree = "<group>"; };
+		43EF10701EDF22FA00D41A21 /* Address+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Address+CoreDataProperties.h"; sourceTree = "<group>"; };
+		43EF10711EDF22FA00D41A21 /* Address+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Address+CoreDataProperties.m"; sourceTree = "<group>"; };
+		43EF10761EDF253800D41A21 /* Address+BIDataManagerExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Address+BIDataManagerExtensions.h"; sourceTree = "<group>"; };
+		43EF10771EDF253800D41A21 /* Address+BIDataManagerExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Address+BIDataManagerExtensions.m"; sourceTree = "<group>"; };
 		A6E06EF51605DD55007A517B /* Core Data Peristence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Core Data Peristence.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E06EF91605DD55007A517B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A6E06EFB1605DD55007A517B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -78,6 +90,7 @@
 		43B15F191ED5E75700354A5F /* DataManagers */ = {
 			isa = PBXGroup;
 			children = (
+				43EF10661EDF223D00D41A21 /* ModelExtensions */,
 				43B15F1A1ED5E75700354A5F /* BIDDataController.h */,
 				43B15F1B1ED5E75700354A5F /* BIDDataController.m */,
 				43B15F1E1ED5E75700354A5F /* StoreController.h */,
@@ -86,13 +99,28 @@
 			path = DataManagers;
 			sourceTree = "<group>";
 		};
+		43EF10661EDF223D00D41A21 /* ModelExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				43EF10671EDF225A00D41A21 /* Person+DataManagerExtensions.h */,
+				43EF10681EDF225A00D41A21 /* Person+DataManagerExtensions.m */,
+				43EF10761EDF253800D41A21 /* Address+BIDataManagerExtensions.h */,
+				43EF10771EDF253800D41A21 /* Address+BIDataManagerExtensions.m */,
+			);
+			path = ModelExtensions;
+			sourceTree = "<group>";
+		};
 		A6E06EEA1605DD55007A517B = {
 			isa = PBXGroup;
 			children = (
-				43EF10531EDC86BE00D41A21 /* Person+CoreDataClass.h */,
-				43EF10541EDC86BE00D41A21 /* Person+CoreDataClass.m */,
-				43EF10551EDC86BE00D41A21 /* Person+CoreDataProperties.h */,
-				43EF10561EDC86BE00D41A21 /* Person+CoreDataProperties.m */,
+				43EF106A1EDF22FA00D41A21 /* Person+CoreDataClass.h */,
+				43EF106B1EDF22FA00D41A21 /* Person+CoreDataClass.m */,
+				43EF106C1EDF22FA00D41A21 /* Person+CoreDataProperties.h */,
+				43EF106D1EDF22FA00D41A21 /* Person+CoreDataProperties.m */,
+				43EF106E1EDF22FA00D41A21 /* Address+CoreDataClass.h */,
+				43EF106F1EDF22FA00D41A21 /* Address+CoreDataClass.m */,
+				43EF10701EDF22FA00D41A21 /* Address+CoreDataProperties.h */,
+				43EF10711EDF22FA00D41A21 /* Address+CoreDataProperties.m */,
 				A6E06F011605DD55007A517B /* Core Data Peristence */,
 				A6E06EF81605DD55007A517B /* Frameworks */,
 				A6E06EF61605DD55007A517B /* Products */,
@@ -221,11 +249,15 @@
 				43EF10511EDC822100D41A21 /* BIDPersonViewController.m in Sources */,
 				A6E06F081605DD55007A517B /* main.m in Sources */,
 				43B15F201ED5E75700354A5F /* BIDDataController.m in Sources */,
+				43EF10741EDF22FA00D41A21 /* Address+CoreDataClass.m in Sources */,
+				43EF10781EDF253800D41A21 /* Address+BIDataManagerExtensions.m in Sources */,
 				A6E06F0C1605DD55007A517B /* BIDAppDelegate.m in Sources */,
 				A6E06F151605DD55007A517B /* Core_Data_Peristence.xcdatamodeld in Sources */,
-				43EF10571EDC86BE00D41A21 /* Person+CoreDataClass.m in Sources */,
+				43EF10691EDF225A00D41A21 /* Person+DataManagerExtensions.m in Sources */,
+				43EF10721EDF22FA00D41A21 /* Person+CoreDataClass.m in Sources */,
+				43EF10751EDF22FA00D41A21 /* Address+CoreDataProperties.m in Sources */,
 				A6E06F221605DDAD007A517B /* BIDViewController.m in Sources */,
-				43EF10581EDC86BE00D41A21 /* Person+CoreDataProperties.m in Sources */,
+				43EF10731EDF22FA00D41A21 /* Person+CoreDataProperties.m in Sources */,
 				43B15F221ED5E75700354A5F /* StoreController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

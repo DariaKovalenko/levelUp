@@ -6,7 +6,9 @@
 #import "BIDViewController.h"
 #import "BIDPersonViewController.h"
 #import "StoreController.h"
-#import "Person+CoreDataProperties.h"
+#import "Person+DataManagerExtensions.h"
+#import "Address+CoreDataProperties.h"
+#import "Address+BIDataManagerExtensions.h"
 
 @interface BIDViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *persons;
@@ -29,6 +31,11 @@
 }
 
 - (void)reloadAllData {
+    NSArray *addresses = [Address allAddresses];
+    for (Address *address in addresses) {
+        NSLog(@"%@ %@ %@ %@", address.country, address.city, address.street, address.code);
+    }
+    
     self.persons = [Person persons];
     [self.personsTableView reloadData];
 }
@@ -63,7 +70,8 @@
     }
     
     Person *object = self.persons[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", object.firstname, object.lastname];
+    Address *address = object.address;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@ %@ %@ %@ %@", object.firstname, object.lastname, address.country, address.city, address.street, address.code];
     
     return cell;
 }

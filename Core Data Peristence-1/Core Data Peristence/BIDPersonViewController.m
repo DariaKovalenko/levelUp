@@ -7,31 +7,53 @@
 //
 
 #import "BIDPersonViewController.h"
+#import "Person+DataManagerExtensions.h"
+#import "Address+BIDataManagerExtensions.h"
+#import "Address+CoreDataProperties.h"
+#import "BIDDataController.h"
 
 @interface BIDPersonViewController ()
-
 @end
 
 @implementation BIDPersonViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self fillWithPerson:self.person];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)fillWithPerson:(Person *)person {
+    self.firstNameField.text = self.person.firstname;
+    self.lastNameField.text = self.person.lastname;
+    Address *address = person.address;
+    if (address) {
+        self.cityField.text = address.city;
+        self.countryField.text = address.country;
+        self.codeField.text = address.code;
+        self.streetField.text = address.street;
+    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)saveButtonClicked:(id)sender {
+    NSString *firstName = self.firstNameField.text;
+    NSString *lastName = self.lastNameField.text;
+    if (!self.person) {
+        self.person = [Person personWithFirstName:firstName andLastName:lastName];
+    } else {
+        [self.person updateWithFirstName:firstName andLastName:lastName];
+    }
+    
+    [self.person updateAddressWithCountry:self.countryField.text
+                                     city:self.cityField.text
+                                   street:self.streetField.text
+                                     code:self.codeField.text];
+    
+    
+    if (self.saveHandler) {
+        self.saveHandler(self.person);
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
-*/
 
 @end

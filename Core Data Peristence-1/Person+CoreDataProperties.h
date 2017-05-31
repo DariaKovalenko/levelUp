@@ -2,7 +2,7 @@
 //  Person+CoreDataProperties.h
 //  Core Data Peristence
 //
-//  Created by Daria on 5/29/17.
+//  Created by Daria on 5/31/17.
 //  Copyright © 2017 Apress. All rights reserved.
 //
 
@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, copy) NSString *firstname;
 @property (nullable, nonatomic, copy) NSString *lastname;
+@property (nullable, nonatomic, retain) Address *address;
 
 @end
 

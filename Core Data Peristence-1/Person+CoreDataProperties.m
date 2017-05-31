@@ -2,7 +2,7 @@
 //  Person+CoreDataProperties.m
 //  Core Data Peristence
 //
-//  Created by Daria on 5/29/17.
+//  Created by Daria on 5/31/17.
 //  Copyright © 2017 Apress. All rights reserved.
 //
 
@@ -16,5 +16,6 @@
 
 @dynamic firstname;
 @dynamic lastname;
+@dynamic address;
 
 @end
