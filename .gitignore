@@ -4,7 +4,7 @@ GrouppedTableView/GrouppedTableView.xcodeproj/project.xcworkspace/xcuserdata/dar
 GrouppedTableView/GrouppedTableView.xcodeproj/xcuserdata/daria.xcuserdatad/xcschemes/GrouppedTableView.xcscheme
 
 .DS_Store
-
+*/Pods/
 build/
 *.pbxuser
 !default.pbxuser
