@@ -20,7 +20,7 @@ static NSString * const kPerson = @"Person";
     NSError *error = nil;
     
     NSFetchRequest *request = [self fetchRequest];
-    request.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"firstname" ascending:YES]]];
+    request.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"firstname" ascending:YES]];
     //    request.predicate = [NSPredicate predicateWithFormat:@"%K == %@", @"firstname", @"Anna"];
     NSArray *objects = [context executeFetchRequest:request error:&error];
     
