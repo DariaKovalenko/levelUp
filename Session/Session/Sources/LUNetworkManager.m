@@ -86,7 +86,6 @@ static NSString * const kPinterestAPIKey = @"4904622470840987547";
 - (void)startTaskWithRequest:(NSURLRequest *)request parsedCompletion:(LUResultErrorBlock)completion {
     self.currentTask = [self.session dataTaskWithRequest:request
                                        completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                                           NSURLErrorCancelled
                                            id result = nil;
                                            if ([response isKindOfClass:[NSHTTPURLResponse class]] && [(NSHTTPURLResponse *)response statusCode] == 200 && data != nil) {
                                                NSError *error = nil;
