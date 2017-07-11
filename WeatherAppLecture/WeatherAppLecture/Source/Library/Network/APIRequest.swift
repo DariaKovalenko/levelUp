@@ -17,6 +17,8 @@ fileprivate struct APIStatusCode {
 class APIRequest: ResultParser {
     
     let session: URLSession
+    
+    var loading = false
     private var task: URLSessionDataTask?
     
     private var urlPath: String {
@@ -25,7 +27,7 @@ class APIRequest: ResultParser {
     
     private var request: URLRequest? {
         let path = urlPath
-        let baseParameters = "?" + APIConstants.Keys.appID + "=" + APIConstants.apiKey
+        let baseParameters = "?" + APIConstants.Keys.appID + "=" + APIConstants.apiKey + "&units=metric"
         let string = bodyParameters?.map { (key, value) in
             return key + "=" + String(describing: value)
             }
@@ -57,11 +59,13 @@ class APIRequest: ResultParser {
     }
     
     func execute(completion: @escaping (Any?, Error?) -> Void) {
-        guard let request = request else {
+        guard !loading, let request = request else {
             return
         }
         
+        loading = true
         task = session.dataTask(with: request) { [weak self] (data, response, error) in
+            self?.loading = false
             guard (response as? HTTPURLResponse)?.statusCode == 200, error == nil else {
                 completion(nil, error)
                 return
