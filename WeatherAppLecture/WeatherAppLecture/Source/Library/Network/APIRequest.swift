@@ -67,12 +67,17 @@ class APIRequest: ResultParser {
         task = session.dataTask(with: request) { [weak self] (data, response, error) in
             self?.loading = false
             guard (response as? HTTPURLResponse)?.statusCode == 200, error == nil else {
-                completion(nil, error)
+                DispatchQueue.main.async {
+                    completion(nil, error)
+                }
                 return
             }
             
             let result = data.flatMap { self?.parseData($0) }
-            completion(self?.resultParser.parseResult(result), nil)
+            let parsedResult = self?.resultParser.parseResult(result)
+            DispatchQueue.main.async {
+                completion(parsedResult, nil)
+            }
         }
         
         task?.resume()

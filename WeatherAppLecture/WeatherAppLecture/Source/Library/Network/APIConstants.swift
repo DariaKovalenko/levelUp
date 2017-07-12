@@ -10,11 +10,12 @@ import Foundation
 
 struct APIConstants {
 
-    static let baseURL = "http://openweathermap.org/data/2.5/"
-    static let apiKey = "b1b15e88fa797225412429c1c50c122a1"
+    static let baseURL = "http://api.openweathermap.org/data/2.5/"
+    static let apiKey = "ac3400280efc6f177fe46ab45083dac7"
     
     struct Path {
         static let weather = "weather"
+        static let forecast = "forecast"
     }
     
     struct Keys {

@@ -8,29 +8,22 @@
 
 import UIKit
 
-class WeatherCoordinateRequest: APIRequest {
-    
-    let latitude: Double
-    let longitude: Double
-    
-    init(session: URLSession = URLSession.shared, latitude: Double, longitude: Double) {
-        self.latitude = latitude
-        self.longitude = longitude
-        super.init(session: session)
-    }
+class WeatherCoordinateRequest: CoordinatesRequest {
     
     override var path: String {
         return APIConstants.Path.weather
     }
     
-    override var bodyParameters: [String : Any]? {
-        return [APIConstants.Keys.Coordinates.latitude : latitude,
-                APIConstants.Keys.Coordinates.longitude : longitude]
-    }
-    
     override var resultParser: ResultParser {
         return WeatherModelParser()
     }
-    
-
 }
+
+class WeatherModelParser: ResultParser {
+    
+    func parseResult(_ result: Any?) -> Any? {
+        return WeatherModel.init(result: result)
+    }
+    
+}
+
